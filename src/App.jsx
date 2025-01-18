@@ -9,7 +9,7 @@ function App() {
 	const [tipValues, setTipValues] = useState([0, 0]);
 
 	let tipAverage = (tipValues[0] + tipValues[1]) / 2 / 100;
-	let tipValue = Number(billValue) * Number(tipAverage);
+	let tipValue = Number((Number(billValue) * Number(tipAverage)).toFixed(2));
 	let payment = Number(billValue) + tipValue;
 
 	function handleChangeBillValue(e) {
