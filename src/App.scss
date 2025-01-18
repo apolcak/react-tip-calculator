@@ -1,0 +1,35 @@
+.form-row {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	margin-bottom: 0.8rem;
+	text-align: left;
+
+	> :first-child {
+		flex-grow: 1;
+	}
+
+	> :last-child {
+		flex-shrink: 0;
+		width: 245px;
+	}
+
+	@media (max-width: 500px) {
+		flex-direction: column;
+	}
+}
+
+[type="number"],
+select {
+	background-color: var(--color-bg);
+	border: 1px solid var(--color-border);
+	border-radius: 0;
+	padding: 2px;
+
+	&:focus {
+		outline: 1px solid var(--color-blue);
+		border-color: var(--color-blue);
+	}
+}
